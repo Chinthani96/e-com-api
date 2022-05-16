@@ -1,9 +1,10 @@
 package com.cdev.ecomapi.model.dao;
 
-import jdk.jfr.Timestamp;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -21,19 +22,19 @@ public class Product {
     private String name;
     @Getter
     @Setter
-    private String description;
+    private String descriptions;
     @Getter
     @Setter
     private Integer quantityOnHand;
-    @Timestamp
+    @CreationTimestamp
     private Date createdAt;
-    @Timestamp
+    @UpdateTimestamp
     private Date updatedAt;
 
     public Product(Integer id, String name, String description, Integer quantityOnHand) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.descriptions = description;
         this.quantityOnHand = quantityOnHand;
     }
 }

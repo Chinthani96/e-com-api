@@ -1,9 +1,10 @@
 package com.cdev.ecomapi.model.dao;
 
-import jdk.jfr.Timestamp;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -19,9 +20,9 @@ public class Role {
     @Getter
     @Setter
     private String userRole;
-    @Timestamp
+    @CreationTimestamp
     private Date createdAt;
-    @Timestamp
+    @UpdateTimestamp
     private Date updatedAt;
 
     public Role(Integer id, String userRole) {

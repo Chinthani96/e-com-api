@@ -1,9 +1,10 @@
 package com.cdev.ecomapi.model.dao;
 
-import jdk.jfr.Timestamp;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -30,9 +31,9 @@ public class User {
     @Getter
     @OneToOne(targetEntity = Role.class, cascade = CascadeType.ALL)
     private Role role;
-    @Timestamp
+    @CreationTimestamp
     private Date createdAt;
-    @Timestamp
+    @UpdateTimestamp
     private Date updatedAt;
 
     public User(Integer id, String username, String password, String email, Role role) {
