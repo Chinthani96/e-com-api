@@ -25,16 +25,20 @@ public class Product {
     private String descriptions;
     @Getter
     @Setter
+    private Double price;
+    @Getter
+    @Setter
     private Integer quantityOnHand;
     @CreationTimestamp
     private Date createdAt;
     @UpdateTimestamp
     private Date updatedAt;
 
-    public Product(Integer id, String name, String description, Integer quantityOnHand) {
+    public Product(Integer id, String name, String description, Double price, Integer quantityOnHand) {
         this.id = id;
         this.name = name;
         this.descriptions = description;
+        this.price = price;
         this.quantityOnHand = quantityOnHand;
     }
 }
