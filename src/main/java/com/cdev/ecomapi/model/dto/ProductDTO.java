@@ -17,5 +17,8 @@ public class ProductDTO {
     private String descriptions;
     @Getter
     @Setter
+    private Double price;
+    @Getter
+    @Setter
     private Integer quantityOnHand;
 }
