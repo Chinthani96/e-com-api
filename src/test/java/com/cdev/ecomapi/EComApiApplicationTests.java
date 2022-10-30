@@ -10,4 +10,8 @@ class EComApiApplicationTests {
     void contextLoads() {
     }
 
+    @Test
+    void mainAppRenderer() {
+    }
+
 }
